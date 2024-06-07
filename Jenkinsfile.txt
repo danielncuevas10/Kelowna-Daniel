@@ -12,7 +12,7 @@ pipeline{
         } 
         stage('Testing Environment'){
             steps{
-            echo 'Testing'
+            sh 'firebase deploy -P lab7-testing --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         } 
         stage('Staging Environment'){
